@@ -10,7 +10,7 @@ import AVFoundation
 class keyController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer:AVAudioPlayer!
-    var playing = false //Boolean used to keep track of whether 
+    var playing = false //Boolean used to keep track of whether the chord sequence is currently playing or not.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +29,58 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
             print(error)
         }
         
-        if(!playing){
+        if(!playing){ //Starts the loop by setting the playing boolean to true, playing the sound and setting its number of loops to -1, which loops it until the stop() method is called.
             playing = true
             audioPlayer.play()
             audioPlayer.numberOfLoops = -1
         }
-        else {
+        else { //Stops the looping.
             playing = false
             audioPlayer.stop()
         }
     }
     
+    @IBAction func c4(_ sender: UIButton) {
+        let soundURL = Bundle.main.url(forResource: "c4", withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.stop()
+        audioPlayer.play()
+    }
+    
+    @IBAction func cs4(_ sender: UIButton) {
+    }
+    
+    @IBAction func d4(_ sender: UIButton) {
+        let soundURL = Bundle.main.url(forResource: "d4", withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.stop()
+        audioPlayer.play()
+    }
+    
+    @IBAction func ds4(_ sender: UIButton) {
+    }
+    
+    @IBAction func e4(_ sender: UIButton) {
+        let soundURL = Bundle.main.url(forResource: "e4", withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.stop()
+        audioPlayer.play()
+    }
     /*
     // MARK: - Navigation
 
