@@ -61,7 +61,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzJ-qN-T27" userLabel="playPause">
                                 <rect key="frame" x="317" y="70" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="play30"/>
                                 <connections>
                                     <action selector="playPause:" destination="iqP-gb-NfJ" eventType="touchUpInside" id="Euc-fc-dRa"/>
