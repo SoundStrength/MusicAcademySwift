@@ -9,8 +9,18 @@ import AVFoundation
 
 class keyController: UIViewController, AVAudioPlayerDelegate {
     
-    var audioPlayer:AVAudioPlayer!
+    var chordPlayer:AVAudioPlayer!
+    var c4player:AVAudioPlayer!
+    var d4player:AVAudioPlayer!
+    var e4player:AVAudioPlayer!
+    
+    let chordURL = Bundle.main.url(forResource: "chordSeq1", withExtension: "wav")
+    let c4URL = Bundle.main.url(forResource: "c4", withExtension: "mp3")
+    let d4URL = Bundle.main.url(forResource: "d4", withExtension: "mp3")
+    let e4URL = Bundle.main.url(forResource: "e4", withExtension: "mp3")
+    
     var playing = false //Boolean used to keep track of whether the chord sequence is currently playing or not.
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +31,8 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func playPause(_ sender: UIButton) {
-        let soundURL = Bundle.main.url(forResource: "chordSeq1", withExtension: "wav")
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            chordPlayer = try AVAudioPlayer(contentsOf: chordURL!)
         }
         catch {
             print(error)
@@ -31,56 +40,58 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         
         if(!playing){ //Starts the loop by setting the playing boolean to true, playing the sound and setting its number of loops to -1, which loops it until the stop() method is called.
             playing = true
-            audioPlayer.play()
-            audioPlayer.numberOfLoops = -1
+            chordPlayer.play()
+            chordPlayer.numberOfLoops = -1
         }
         else { //Stops the looping.
             playing = false
-            audioPlayer.stop()
+            chordPlayer.stop()
         }
     }
     
     @IBAction func c4(_ sender: UIButton) {
-        let soundURL = Bundle.main.url(forResource: "c4", withExtension: "mp3")
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            c4player = try AVAudioPlayer(contentsOf: c4URL!)
         }
         catch {
             print(error)
         }
-        audioPlayer.stop()
-        audioPlayer.play()
+        
+        c4player.stop()
+        c4player.play()
     }
     
     @IBAction func cs4(_ sender: UIButton) {
     }
     
     @IBAction func d4(_ sender: UIButton) {
-        let soundURL = Bundle.main.url(forResource: "d4", withExtension: "mp3")
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            d4player = try AVAudioPlayer(contentsOf: d4URL!)
         }
         catch {
             print(error)
         }
-        audioPlayer.stop()
-        audioPlayer.play()
+        
+        d4player.stop()
+        d4player.play()
     }
     
     @IBAction func ds4(_ sender: UIButton) {
     }
     
     @IBAction func e4(_ sender: UIButton) {
-        let soundURL = Bundle.main.url(forResource: "e4", withExtension: "mp3")
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            e4player = try AVAudioPlayer(contentsOf: e4URL!)
         }
         catch {
             print(error)
         }
-        audioPlayer.stop()
-        audioPlayer.play()
+        
+        e4player.stop()
+        e4player.play()
     }
+    
+    
     /*
     // MARK: - Navigation
 
