@@ -30,6 +30,7 @@
 		A8A4FAA5228E5FB100AC7AD0 /* d#4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4FA9F228E5FB000AC7AD0 /* d#4.mp3 */; };
 		A8A4FAA6228E5FB100AC7AD0 /* g#4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4FAA0228E5FB000AC7AD0 /* g#4.mp3 */; };
 		A8A4FAA7228E5FB100AC7AD0 /* a#4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4FAA1228E5FB100AC7AD0 /* a#4.mp3 */; };
+		A8ABA29E228FB59C003DAE82 /* d5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A8ABA29D228FB59B003DAE82 /* d5.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A8A4FA9F228E5FB000AC7AD0 /* d#4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "d#4.mp3"; path = "Audio Files/d#4.mp3"; sourceTree = "<group>"; };
 		A8A4FAA0228E5FB000AC7AD0 /* g#4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "g#4.mp3"; path = "Audio Files/g#4.mp3"; sourceTree = "<group>"; };
 		A8A4FAA1228E5FB100AC7AD0 /* a#4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "a#4.mp3"; path = "Audio Files/a#4.mp3"; sourceTree = "<group>"; };
+		A8ABA29D228FB59B003DAE82 /* d5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = d5.mp3; path = "Audio Files/d5.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		A89F12AF228A1E7A0029B6D3 = {
 			isa = PBXGroup;
 			children = (
+				A8ABA29D228FB59B003DAE82 /* d5.mp3 */,
 				A8A4FAA1228E5FB100AC7AD0 /* a#4.mp3 */,
 				A8A4FA9D228E5FB000AC7AD0 /* c#4.mp3 */,
 				A8A4FA9E228E5FB000AC7AD0 /* c#5.mp3 */,
@@ -283,6 +286,7 @@
 				A8A4FAA5228E5FB100AC7AD0 /* d#4.mp3 in Resources */,
 				A89F12F3228B72C70029B6D3 /* d4.mp3 in Resources */,
 				A89F12F5228B72C70029B6D3 /* a4.mp3 in Resources */,
+				A8ABA29E228FB59C003DAE82 /* d5.mp3 in Resources */,
 				A8A4FAA2228E5FB100AC7AD0 /* f#4.mp3 in Resources */,
 				A89F12FA228B72C70029B6D3 /* b4.mp3 in Resources */,
 				A89F12F2228B72C70029B6D3 /* c5.mp3 in Resources */,
