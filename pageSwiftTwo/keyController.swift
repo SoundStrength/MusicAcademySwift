@@ -44,6 +44,9 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
     let cs5URL = Bundle.main.url(forResource: "c#5", withExtension: "mp3")
     let d5URL = Bundle.main.url(forResource: "d5", withExtension: "mp3")
     
+    let pause = UIImage(named: "pause30")
+    let play = UIImage(named: "play30")
+    
     var playing = false //Boolean used to keep track of whether the chord sequence is currently playing or not.
     
 
@@ -65,11 +68,14 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         
         if(!playing){ //Starts the loop by setting the playing boolean to true, playing the sound and setting its number of loops to -1, which loops it until the stop() method is called.
             playing = true
+            sender.setImage(pause, for: UIControlState.normal)
             chordPlayer.play()
             chordPlayer.numberOfLoops = -1
+            
         }
         else { //Stops the looping.
             playing = false
+            sender.setImage(play, for: UIControlState.normal)
             chordPlayer.stop()
         }
     }
