@@ -9,6 +9,23 @@ import AVFoundation
 
 class keyController: UIViewController, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var cs4btn: UIButton!
+    @IBOutlet weak var d4btn: UIButton!
+    @IBOutlet weak var ds4btn: UIButton!
+    @IBOutlet weak var e4btn: UIButton!
+    @IBOutlet weak var f4btn: UIButton!
+    @IBOutlet weak var fs4btn: UIButton!
+    @IBOutlet weak var g4btn: UIButton!
+    @IBOutlet weak var gs4btn: UIButton!
+    @IBOutlet weak var a4btn: UIButton!
+    @IBOutlet weak var as4btn: UIButton!
+    @IBOutlet weak var b4btn: UIButton!
+    @IBOutlet weak var c5btn: UIButton!
+    @IBOutlet weak var cs5btn: UIButton!
+    @IBOutlet weak var d5btn: UIButton!
+    
+    var availableKeys = 1;
+    
     var chordPlayer:AVAudioPlayer!
     var c4player:AVAudioPlayer!
     var cs4player:AVAudioPlayer!
@@ -69,6 +86,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         if(!playing){ //Starts the loop by setting the playing boolean to true, playing the sound and setting its number of loops to -1, which loops it until the stop() method is called.
             playing = true
             sender.setImage(pause, for: UIControlState.normal)
+            
             chordPlayer.play()
             chordPlayer.numberOfLoops = -1
             
@@ -80,6 +98,30 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+   
+    @IBAction func plusBtn(_ sender: UIButton) {
+        if(availableKeys<15){
+            availableKeys = availableKeys + 1
+            print(availableKeys)
+            switch availableKeys {
+            case 2: g4btn.alpha = 1
+                g4btn.isEnabled = true
+            default: print("This ain't it chief")
+            }
+        }
+    }
+    
+    @IBAction func minusBtn(_ sender: UIButton) {
+        if(availableKeys>1){
+            availableKeys = availableKeys - 1
+            print(availableKeys)
+            switch availableKeys {
+            case 1: g4btn.alpha = 0.5
+                g4btn.isEnabled = false
+            default: print("You've reached the bottom or something")
+            }
+        }
+    }
     
     @IBAction func c4(_ sender: UIButton) {
         do {
