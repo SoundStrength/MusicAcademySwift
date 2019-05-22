@@ -23,6 +23,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var c5btn: UIButton!
     @IBOutlet weak var cs5btn: UIButton!
     @IBOutlet weak var d5btn: UIButton!
+    @IBOutlet weak var keysNum: UILabel!
     
     var availableKeys = 1;
     
@@ -106,6 +107,46 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
             switch availableKeys {
             case 2: g4btn.alpha = 1
                 g4btn.isEnabled = true
+                keysNum.text = "2"
+            case 3: e4btn.alpha = 1
+                e4btn.isEnabled = true
+                keysNum.text = "3"
+            case 4: a4btn.alpha = 1
+                a4btn.isEnabled = true
+                keysNum.text = "4"
+            case 5: d4btn.alpha = 1
+                d4btn.isEnabled = true
+                keysNum.text = "5"
+            case 6: f4btn.alpha = 1
+                f4btn.isEnabled = true
+                keysNum.text = "6"
+            case 7: b4btn.alpha = 1
+                b4btn.isEnabled = true
+                keysNum.text = "7"
+            case 8: c5btn.alpha = 1
+                c5btn.isEnabled = true
+                keysNum.text = "8"
+            case 9: d5btn.alpha = 1
+                d5btn.isEnabled = true
+                keysNum.text = "9"
+            case 10: fs4btn.alpha = 1
+                fs4btn.isEnabled = true
+                keysNum.text = "10"
+            case 11: ds4btn.alpha = 1
+                ds4btn.isEnabled = true
+                keysNum.text = "11"
+            case 12: gs4btn.alpha = 1
+                gs4btn.isEnabled = true
+                keysNum.text = "12"
+            case 13: as4btn.alpha = 1
+                as4btn.isEnabled = true
+                keysNum.text = "13"
+            case 14: cs4btn.alpha = 1
+                cs4btn.isEnabled = true
+                keysNum.text = "14"
+            case 15: cs5btn.alpha = 1
+                cs5btn.isEnabled = true
+                keysNum.text = "15"
             default: print("This ain't it chief")
             }
         }
@@ -118,6 +159,46 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
             switch availableKeys {
             case 1: g4btn.alpha = 0.5
                 g4btn.isEnabled = false
+                keysNum.text = "1"
+            case 2: e4btn.alpha = 0.5
+                e4btn.isEnabled = false
+                keysNum.text = "2"
+            case 3: a4btn.alpha = 0.5
+                a4btn.isEnabled = false
+                keysNum.text = "3"
+            case 4: d4btn.alpha = 0.5
+                d4btn.isEnabled = false
+                keysNum.text = "4"
+            case 5: f4btn.alpha = 0.5
+                f4btn.isEnabled = false
+                keysNum.text = "5"
+            case 6: b4btn.alpha = 0.5
+                b4btn.isEnabled = false
+                keysNum.text = "6"
+            case 7: c5btn.alpha = 0.5
+                c5btn.isEnabled = false
+                keysNum.text = "7"
+            case 8: d5btn.alpha = 0.5
+                d5btn.isEnabled = false
+                keysNum.text = "8"
+            case 9: fs4btn.alpha = 0.5
+            fs4btn.isEnabled = true
+                keysNum.text = "9"
+            case 10: ds4btn.alpha = 0.5
+            ds4btn.isEnabled = false
+                keysNum.text = "10"
+            case 11: gs4btn.alpha = 0.5
+                gs4btn.isEnabled = false
+                keysNum.text = "11"
+            case 12: as4btn.alpha = 0.5
+                as4btn.isEnabled = false
+                keysNum.text = "12"
+            case 13: cs4btn.alpha = 0.5
+                cs4btn.isEnabled = false
+                keysNum.text = "13"
+            case 14: cs5btn.alpha = 0.5
+                cs5btn.isEnabled = false
+                keysNum.text = "14"
             default: print("You've reached the bottom or something")
             }
         }

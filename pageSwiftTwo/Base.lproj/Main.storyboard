@@ -157,20 +157,27 @@
                                     <action selector="cs4:" destination="WW9-BH-Gye" eventType="touchUpInside" id="4KJ-SC-OPn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4i-IV-qdC">
-                                <rect key="frame" x="517" y="63" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="plusBtn:" destination="WW9-BH-Gye" eventType="touchUpInside" id="0Lp-ed-ZmY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-b5-EsD">
-                                <rect key="frame" x="479" y="63" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="-"/>
+                                <rect key="frame" x="461" y="67" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="minus30"/>
                                 <connections>
                                     <action selector="minusBtn:" destination="WW9-BH-Gye" eventType="touchUpInside" id="zVo-7M-X1l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30k-m0-3i0">
+                                <rect key="frame" x="509" y="67" width="42" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4i-IV-qdC">
+                                <rect key="frame" x="568" y="67" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus30"/>
+                                <connections>
+                                    <action selector="plusBtn:" destination="WW9-BH-Gye" eventType="touchUpInside" id="0Lp-ed-ZmY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,6 +200,7 @@
                         <outlet property="fs4btn" destination="GC6-yX-lKg" id="bYf-eG-eBK"/>
                         <outlet property="g4btn" destination="nO8-De-rBc" id="239-6y-2oX"/>
                         <outlet property="gs4btn" destination="aeu-69-J79" id="W32-Hl-t68"/>
+                        <outlet property="keysNum" destination="30k-m0-3i0" id="h7E-WV-c6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQ0-Fb-0XB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,7 +338,9 @@
     <resources>
         <image name="info30" width="32" height="32"/>
         <image name="keys30" width="32" height="32"/>
+        <image name="minus30" width="32" height="32"/>
         <image name="play30" width="32" height="32"/>
+        <image name="plus30" width="32" height="32"/>
         <image name="settings30" width="32" height="32"/>
         <image name="settings30-3" width="32" height="32"/>
     </resources>
