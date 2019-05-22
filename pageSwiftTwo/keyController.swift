@@ -26,6 +26,8 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var keysNum: UILabel!
     
     var availableKeys = 1;
+    var keyVolume = 0.25;
+    var chordVolume = 1.0;
     
     var chordPlayer:AVAudioPlayer!
     var c4player:AVAudioPlayer!
@@ -76,6 +78,15 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func keyVolume(_ sender: UISlider) {
+        keyVolume = Double(sender.value)
+    }
+    
+    @IBAction func chordVolume(_ sender: UISlider) {
+        chordVolume = Double(sender.value)
+        chordPlayer.setVolume(Float(chordVolume), fadeDuration: 0)
+    }
+    
     @IBAction func playPause(_ sender: UIButton) {
         do {
             chordPlayer = try AVAudioPlayer(contentsOf: chordURL!)
@@ -87,7 +98,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         if(!playing){ //Starts the loop by setting the playing boolean to true, playing the sound and setting its number of loops to -1, which loops it until the stop() method is called.
             playing = true
             sender.setImage(pause, for: UIControlState.normal)
-            
+            chordPlayer.setVolume(Float(chordVolume), fadeDuration: 0)
             chordPlayer.play()
             chordPlayer.numberOfLoops = -1
             
@@ -211,7 +222,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        c4player.setVolume(0.25, fadeDuration: 0.0)
+        c4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         c4player.stop()
         c4player.play()
     }
@@ -223,7 +234,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        cs4player.setVolume(0.25, fadeDuration: 0.0)
+        cs4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         cs4player.stop()
         cs4player.play()
     
@@ -240,7 +251,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        d4player.setVolume(0.25, fadeDuration: 0.0)
+        d4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         d4player.stop()
         d4player.play()
     }
@@ -252,7 +263,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        ds4player.setVolume(0.25, fadeDuration: 0.0)
+        ds4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         ds4player.stop()
         ds4player.play()
     }
@@ -264,7 +275,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        e4player.setVolume(0.25, fadeDuration: 0.0)
+        e4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         e4player.stop()
         e4player.play()
     }
@@ -276,7 +287,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        f4player.setVolume(0.25, fadeDuration: 0.0)
+        f4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         f4player.stop()
         f4player.play()
     }
@@ -288,7 +299,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        fs4player.setVolume(0.25, fadeDuration: 0.0)
+        fs4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         fs4player.stop()
         fs4player.play()
     }
@@ -300,7 +311,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        g4player.setVolume(0.25, fadeDuration: 0.0)
+        g4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         g4player.stop()
         g4player.play()
     }
@@ -312,7 +323,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        gs4player.setVolume(0.25, fadeDuration: 0.0)
+        gs4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         gs4player.stop()
         gs4player.play()
     }
@@ -324,7 +335,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        a4player.setVolume(0.25, fadeDuration: 0.0)
+        a4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         a4player.stop()
         a4player.play()
     }
@@ -336,7 +347,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        as4player.setVolume(0.25, fadeDuration: 0.0)
+        as4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         as4player.stop()
         as4player.play()
     }
@@ -348,7 +359,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        b4player.setVolume(0.25, fadeDuration: 0.0)
+        b4player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         b4player.stop()
         b4player.play()
     }
@@ -360,7 +371,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        c5player.setVolume(0.25, fadeDuration: 0.0)
+        c5player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         c5player.stop()
         c5player.play()
     }
@@ -372,7 +383,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        cs5player.setVolume(0.25, fadeDuration: 0.0)
+        cs5player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         cs5player.stop()
         cs5player.play()
     }
@@ -384,7 +395,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        d5player.setVolume(0.25, fadeDuration: 0.0)
+        d5player.setVolume(Float(keyVolume), fadeDuration: 0.0)
         d5player.stop()
         d5player.play()
     }
