@@ -261,7 +261,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="XFK-SM-6MC" kind="relationship" relationship="viewControllers" id="vx2-OS-pPj"/>
-                        <segue destination="68x-8C-RAq" kind="relationship" relationship="viewControllers" id="BE1-1m-3ZB"/>
                         <segue destination="aBR-yB-IAI" kind="relationship" relationship="viewControllers" id="xhz-Qx-woW"/>
                     </connections>
                 </tabBarController>
@@ -278,12 +277,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTJ-bz-AE5">
-                                <rect key="frame" x="165" y="32" width="338" height="311"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="164" y="32" width="338" height="311"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Music Academy! The aim of this app is to help you find your confidence in making music. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="999" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fq-67-dUd">
                                         <rect key="frame" x="8" y="8" width="322" height="295"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -299,22 +298,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozg-Fc-uGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162.6686656671666" y="-431.19999999999999"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Pg7-hx-cn0">
-            <objects>
-                <viewController id="1gD-Q4-YdI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RbZ-rJ-hvf">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="343"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="jtI-u2-wek"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XTl-Vn-Pml"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sPz-ku-8dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1163" y="487"/>
         </scene>
         <!--Keyboard-->
         <scene sceneID="8Pz-xZ-ukc">
@@ -337,25 +320,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qE-Qb-yl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="1390"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="POC-9k-xEP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="68x-8C-RAq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings30-3" landscapeImage="settings30-3" id="lzh-Sj-z7a"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytA-tQ-RGa">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1gD-Q4-YdI" kind="relationship" relationship="rootViewController" id="aXe-mr-IDq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VJf-PZ-B8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="519" y="486"/>
         </scene>
         <!--Info-->
         <scene sceneID="tGr-By-HKB">
@@ -383,6 +347,5 @@
         <image name="minus30" width="32" height="32"/>
         <image name="play30" width="32" height="32"/>
         <image name="plus30" width="32" height="32"/>
-        <image name="settings30-3" width="32" height="32"/>
     </resources>
 </document>
