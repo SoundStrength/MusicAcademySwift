@@ -193,7 +193,7 @@ class keyController: UIViewController, AVAudioPlayerDelegate {
                 d5btn.isEnabled = false
                 keysNum.text = "8"
             case 9: fs4btn.alpha = 0.5
-            fs4btn.isEnabled = true
+            fs4btn.isEnabled = false
                 keysNum.text = "9"
             case 10: ds4btn.alpha = 0.5
             ds4btn.isEnabled = false
